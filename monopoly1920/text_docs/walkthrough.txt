@@ -1,0 +1,67 @@
+Task One: Jail Mechanics
+
+- I implemented the mechanic for players to go to jail when they land on the "Go To Jail" square. This is tracked in the game state and triggered through the `gamesquare` file.
+- I added functionality where players go to jail after rolling doubles three times in a row. This is managed through the `player` and `controller` files.
+- A $50 fee is required to get out of jail, and I set up a method for players to pay this fee. You can see this in the `player` file under the `payJailFee` method.
+- Players can use a "Get Out of Jail Free" card to escape jail, which is implemented in the `player` file. This allows them to bypass the jail mechanics without paying.
+- I implemented a system to allow players to attempt rolling doubles to escape jail. If they fail, they stay in jail, which is managed by tracking turns in the `player` file.
+- After three failed attempts, players are automatically released from jail, which is handled by the `player` file’s `jailTimer` method.
+- I created UI buttons for jail actions like "Pay $50" and "Roll for Doubles," which are located in the `view` file and linked to the controller for processing.
+- The jail state (whether a player is in jail or not) and their position on the board are maintained, ensuring the game state is consistent. This is implemented across the `player`, `controller`, and `gamesquare` files.
+
+FILES USED: `player`, `controller`, `gamesquare`
+
+---
+
+Task Two: Player Name Entry
+
+- When the game starts, I created a dialog box for each player to enter their name. This is visible at the beginning of the game. The dialog box code is located in the `view` file.
+- If the player cancels or enters an empty name, the default names (Player 1, Player 2, etc.) are assigned to the players. This default logic is handled in the `controller` file.
+- I pass the player names to the `Player` objects during their creation, so each player has a unique name in the game. The logic for this is in the `controller` file’s player creation method.
+
+FILES USED: `view`, `controller`
+
+---
+
+Task Three: Player Tokens
+
+- I implemented numbered tokens for each player (Player 1, Player 2, etc.), which are displayed on the board and are unique to each player. This is implemented in the `controller` file.
+- I assigned colors to each player’s token (e.g., Red, Blue, Green). This is done in the `controller` file where the color assignments are made based on the player's position.
+- I also added the ability for players to upload custom images for their tokens. This feature is managed through the `view` and `controller` files, with custom image paths being stored in the `player` file.
+
+FILES USED: `view`, `controller`, `player`
+
+---
+
+Task Four: Player Count and Game Start
+
+- I created functionality to allow players to select the number of players (2–8). This option is visible at the start of the game, and the selection is managed in the `view` file.
+- Each player then enters their name (or gets a default name). This is captured through the dialog box described in Task Two and passed to the `controller` file.
+- The game begins with the selected number of players and the names entered or defaulted. This is handled in the `controller` file during the game start process.
+
+FILES USED: `view`, `player`
+
+---
+
+Task Five: Token Movement and Updates
+
+- I ensured that each player's token is displayed on their current position on the board. The board state is automatically updated when players move. This is implemented in the `view` and `controller` files.
+- I added logic to handle multiple players on the same space by slightly offsetting the tokens to avoid overlapping. This is done through token positioning in the `view` file.
+- The tokens are automatically updated as players move around the board. This is managed in the `controller` file during each player’s turn.
+- I implemented the removal of tokens for bankrupt players, ensuring they no longer appear on the board. This is checked in the `controller` file when determining player bankruptcy.
+- I also used emoji tokens that players selected during setup to represent their tokens. This is controlled through the `view` file and passed through the `controller`.
+
+FILES USED: `view`, `controller`
+
+---
+
+Task Six: Setup Screen
+
+- I created a dedicated setup screen that appears before the main game starts. This screen includes:
+  - A player count selection (2–8), implemented in the `view` file.
+  - Name entry for each player, which uses the dialog box described in Task Two and is processed in the `controller` file.
+  - Token selection, allowing players to choose their token. I enforced uniqueness of tokens to prevent two players from having the same token. This is handled in the `view` and `controller` files.
+  - House rules options (Free Parking collects taxes, Auction unowned properties, Double salary for landing on Go), which are presented as checkboxes in the setup screen. The selected options are passed to the `controller` file to be used during gameplay.
+- All this information is collected before starting the main game and passed to the `controller` to configure the game rules.
+
+FILES USED: `view`, `controller`

@@ -1,0 +1,5 @@
+I used AI to help recap and understand the content of the README.md file and the associated source code. The AI helped me break down the code and provided suggestions on how to improve the structure and clarity of my explanation. I used the prompt: "Summarize the content of the provided code and README.md, and give suggestions to make the explanation clearer and easier to follow."
+
+Additionally, I asked the AI to help rewrite my suggestions, filtering through them to ensure they were more concise and easier to understand. The prompt I used for this was: "Rewrite these suggestions to make them clearer and more direct, while maintaining the technical accuracy."
+
+By doing this, I was able to streamline the explanations in the README.md and ensure the suggestions I added were well-structured and easy to follow.

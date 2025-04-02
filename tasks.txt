@@ -1,0 +1,58 @@
+Task one:
+     - Going to jail when landing on "Go To Jail"
+     - Going to jail after rolling doubles three times
+     - Paying $50 to get out of jail
+     - Using Get Out of Jail Free cards
+     - Attempting to roll doubles to escape
+     - Automatic release after 3 failed attempts
+     - Proper UI buttons for jail actions
+     - Tracking turns in jail
+     - Maintaining jail state and position
+     FILES: player, controller, gamesquare
+
+Task two:
+     - naming player
+     - Show a dialog box for each player to enter their name when the game starts
+     - Use default names (Player 1, Player 2, etc.) if the user cancels or enters an empty name
+     - Pass these names to the Player objects during creation
+     FILES: view, controller
+
+Task three:
+     - tokens
+     - Use numbered tokens (Player 1, Player 2, etc.).
+     - Assign colors (Red, Blue, Green, etc.).
+     - Let players upload custom images.
+     FILES: view, controller, player
+
+Task four:
+     - Players select a count (2–8).
+     - Each player enters their name (or gets a default).
+     - The game starts with the chosen number.
+     FILES: view, player
+
+Task five:
+     - Show each player's token on their current board position
+     - Handle multiple players on the same space by offsetting tokens
+     - Automatically update token positions when players move
+     - Remove tokens for bankrupt players
+     - Use the emoji tokens selected during player setup
+     FILES: view, controller
+
+Task Six:
+     - Creates a dedicated setup screen with:
+          - Player count selection (2-8)
+          - Name entry for each player
+          - Token selection (with unique tokens enforced)
+          - House rules options:
+               - Free Parking collects all taxes
+               - Auction unowned properties
+               - Double salary for landing on Go
+          - Collects all this information before starting the main game
+          - Passes the configuration to the controller which can then use the house rules during gameplay
+     FILES: view, controller
+
+Task seven:
+     - When Free Parking rule is enabled:
+     - Tax payments go into the Free Parking pot
+     - Landing on Free Parking collects the pot
+     FILES: controller
