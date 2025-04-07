@@ -1,4 +1,4 @@
-To start game:
-"""
+To run game:
+```
 python view.py
-"""
+```
